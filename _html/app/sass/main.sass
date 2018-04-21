@@ -1,0 +1,369 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+=keyframes($name)
+  @keyframes #{$name}
+    @content
+
++keyframes(fadeInDown)
+  0%
+    opacity: 0
+    bottom: 40px
+  100%
+    opacity: 1
+    bottom: 0
++keyframes(fadeInUp)
+  0%
+    opacity: 0
+    top: 40px
+  100%
+    opacity: 1
+    top: 0
+html, body
+  height: 100%
+  font-size: 16px
+  line-height: 28px
+  position: relative
+  font-family: 'Nunito Sans', sans-serif
+h1, h2, h3, h4
+  font-family: 'Montserrat', sans-serif
+  font-weight: 500
+h1
+  font-size: 38/16+rem
+  margin: 27px 0
+  line-height: 3.5rem
+h2
+  font-size: 30/16+rem
+  margin: 36px 0
+  position: relative
+  &.start
+    animation: fadeInDown 1s
+    animation-fill-mode: forwards
+p
+  font-size: 16px
+  font-family: 'Nunito Sans', sans-serif
+header
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 100
+.wrapper
+  margin: 0 auto
+  max-width: 1190px
+  padding: 0 10px
+.btn
+  background-color: #0fc9c3 
+  font-family: 'Montserrat', sans-serif
+  width: 180px
+  height: 54px
+  text-transform: uppercase
+  color: #fff
+  display: block
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  &--load
+    height: 100px
+    width: 100%
+    background-color: #f5f5f5
+    color: #8d8d8d
+    &:hover
+      background-color: #0fc9c3 !important 
+      color: #fff
+  &:hover
+    background-color: #141414
+.hidden
+  display: none
+.header-nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: relative
+.header-menu
+  list-style-type: none !important
+  display: flex
+  flex-basis: 670
+  justify-content: flex-end
+  padding: 42px 0
+  li
+    margin-left: 28px
+    text-transform: uppercase
+    font-size: 12px
+    a
+      color: #191919
+      transition: .3s ease
+      &:hover
+        color: #0fc9c3 
+.banner
+  width: 100%
+  height: 100vh
+  background-color: #eee
+  background-image: url("../img/bg2.jpg")
+  background-size: cover
+  .wrapper
+    height: 100%
+    position: relative
+  p
+    margin-bottom: 35px 
+.banner-content
+  padding: 0 45px 
+  max-width: 550px
+  position: absolute
+  right: 0
+  top: 50%
+  transform: translateY(-50%)
+.section-heading
+  max-width: 650px
+  margin: 0 auto
+  padding: 0 10px
+  text-align: center
+  p.start
+    animation: fadeInUp 1s
+    animation-fill-mode: forwards
+    position: relative
+.section-descr
+  padding: 90px 0 100px
+  p
+    margin-bottom: 36px
+.skills
+  padding: 160px 0
+  position: relative
+  .wrapper
+    position: relative
+.section-color
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  width: 50%
+  background-color: #eee
+.section-bg
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  width: 50%
+  background-image: url("../img/section-bg.jpg")
+  background-size: cover
+  background-position: -250px 0
+.bar
+  margin-bottom: 38px
+  &__title
+    text-transform: uppercase
+    color: #000
+    font-size: 12px
+  &__line
+    max-width: 500px
+    height: 3px
+    background-color: #d8d8d8
+    position: relative
+    div
+      position: absolute
+      height: 3px
+      background-color: #0fc9c3 
+      top: 0
+      left: 0
+.achievements
+  background-color: #0fc9c3 
+  padding: 96px 0 62px
+.achievementsList
+  list-style: none
+  display: flex
+  flex-wrap: wrap
+.achievementsListItem
+  display: flex
+  color: #fff
+  flex-basis: 270px
+  margin-bottom: 34px
+  &__icon
+    font-size: 48px
+    margin-right: 25px
+    position: relative
+    &.start
+      animation: fadeInDown 2s
+      animation-fill-mode: forwards
+  &__descr
+    font-size: 12px
+    text-transform: uppercase
+    div
+      font-size: 18px
+.galleryContainer
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  align-content: center
+.galleryItem
+  flex-basis: 25%
+  position: relative
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+  .overlay
+    background-color: #141414
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    bottom: 100%
+    transition: .3s ease
+    display: flex
+    align-items: center
+    justify-content: center
+    a
+      color: #fff
+    i
+      font-size: 48px
+  &.start
+    i
+      animation: fadeInDown 2s
+      animation-fill-mode: forwards
+      position: relative
+  &--animate
+    overflow: initial
+  &:hover
+    .overlay
+      bottom: 0
+.galleryItem.start i
+  animation: fadeInDown 2s
+  animation-fill-mode: forwards
+.relation
+  position: relative
+  margin-top: 55px
+  &__ratio
+    padding-top: 56.25%
+    height: 0
+  &__content
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    width: 100%
+    border: none
+.services
+  padding: 90px 0 90px
+  background-color: #f5f5f5
+  .galleryContainer
+    justify-content: space-between
+    align-items: flex-start
+  .galleryItem
+    text-align: center
+    padding: 0px 
+    flex-basis: 22%
+    margin-bottom: 50px
+    i
+      font-size: 48px
+      color: #656565
+  h4
+    font-size: 12px
+    text-transform: uppercase
+    color: #191919
+  p
+    color: #777
+.section-quote
+  background-color: #0fc9c3
+  padding: 180px 0 56px
+.quote
+  text-align: center
+  color: #fff
+  font-family: 'Montserrat', sans-serif
+  padding: 0 170px
+  &__text
+    font-size: 30/16+rem
+    line-height: 2.8rem
+    margin-bottom: 35px
+    &:before, &:after
+      content: '" '
+  &__author
+    font-size: 12px
+    text-transform: uppercase
+.labels
+  background-color: #FFF
+  padding: 64px 0
+.labels-wrap
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+  width: 100%
+.label-item
+  flex-basis: 120px
+  margin: 30px
+.section-feedback
+  background-color: #f5f5f5
+.clearfix:after
+  content: ""
+  display: table
+  clear: both
+.contact-form
+  max-width: 690px
+  padding: 0 10px
+  margin: 0 auto
+  input, textarea
+    border: none
+    background-color: #FFF
+    padding: 16px
+    margin-bottom: 30px
+#form-name
+  float: left
+  margin-right: 30px
+  width: calc(50% - 15px)
+#form-mail
+  width: calc(50% - 15px)
+#form-title, #form-message
+  width: 100%
+#form-message
+  height: 170px
+input.btn
+  background-color: #10c9c3
+  margin: 0 auto
+  transition: .3s ease
+  &:hover
+    background-color: #141414
+footer
+  padding: 100px 0 70px
+  background-color: #141414
+  color: #fff
+  font-size: 15px
+  h3
+    font-size: 18px
+  .wrapper
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+  ul
+    list-style-type: none
+  a
+    color: #fff
+    &:hover
+      text-decoration: underline
+.footer-col-1
+  flex-grow: 4
+.footer-col-2
+  flex-grow: 3
+.footer-col-3
+  flex-grow: 1
+.footer-col-4
+  flex-grow: 2
+.footer-col-5
+  flex-grow: 1
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4, .footer-col-5
+  margin-bottom: 30px
+
+.hamburger
+  display: none
+
+
+
+
+
+
+
+
+
+@import "media"

@@ -1,0 +1,88 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) 
+  .section-bg
+    width: 45%
+  .section-color
+    width: 55%
+  .achievementsList, .labels-wrap
+    justify-content: center
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) 
+  .section-bg
+    display: none
+  .section-color
+    width: 100%
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) 
+  html, body
+    overflow-x: hidden
+  .start
+    animation: none !important
+  .hamburger
+    display: block
+    z-index: 110
+  .header-menu
+    display: none
+    position: fixed
+    top: 0
+    height: 100%
+    left: 0
+    right: 0
+    background-color: #0fc9c3 
+    opacity: .9
+    li
+      display: block
+      margin-bottom: 20px
+      font-size: 16px
+      a
+        color: #fff
+        display: block
+        &:hover
+          color: #141414
+  .galleryItem
+    flex-basis: 50%
+  .services
+    .galleryItem
+      flex-basis: 46%
+  .quote
+    padding: 0
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) 
+  html, body
+    font-size: 12px
+  .header-menu
+    width: 320px
+  .banner
+    .wrapper
+      justify-content: center
+    .banner-content
+      padding: 10px
+      max-width: 480px
+  #form-name
+    float: none
+    width: 100%
+  #form-mail
+    width: 100%
+  .skills
+    padding: 100px 0
+  .section-quote
+    padding-top: 140px
+  .section-descr
+    padding: 60px 0 90px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) 
+  .header-menu
+    width: 280px
+  .galleryItem
+    flex-basis: 100%
+  .services
+    .galleryItem
+      flex-basis: 100%
